@@ -1,0 +1,7 @@
+{
+    "name": "ipr-arcade-impulse",
+    "files": {
+        "lua/packages/ipr-arcade-impulse/package.lua": "https://raw.githubusercontent.com/Pika-Software/ipr-arcade-impulse/master/lua/packages/ipr-arcade-impulse/package.lua",
+        "lua/packages/ipr-arcade-impulse/init.lua": "https://raw.githubusercontent.com/Pika-Software/ipr-arcade-impulse/master/lua/packages/ipr-arcade-impulse/init.lua"
+    }
+}
