@@ -1,4 +1,4 @@
-import( gpm.LuaPackageExists( "packages/ipr-base" ) and "packages/ipr-base" or "https://github.com/Pika-Software/ipr-base" )
+import( gpm.PackageExists( "packages/ipr-base" ) and "packages/ipr-base" or "https://github.com/Pika-Software/ipr-base" )
 
 local util_TraceLine = util.TraceLine
 local math_max = math.max
