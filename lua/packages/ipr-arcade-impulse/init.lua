@@ -1,4 +1,4 @@
-require( "packages/ipr-base", "https://github.com/Pika-Software/ipr-base" )
+install( "packages/ipr-base", "https://github.com/Pika-Software/ipr-base" )
 
 local util_TraceLine = util.TraceLine
 local math_max = math.max
