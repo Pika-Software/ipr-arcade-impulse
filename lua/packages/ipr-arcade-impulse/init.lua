@@ -8,7 +8,7 @@ local hook = hook
 local ipr_velocity = CreateConVar( "ipr_velocity", "200", FCVAR_ARCHIVE, "Determines the maximum allowable player's body impact from damage.", 1, 100000 )
 local packageName = gpm.Package:GetIdentifier()
 
-hook.Add( "PlayerRagdollCreated", packageName, function( ply, ragdoll )
+hook.Add( "PlayerRagdollCreated", "ImpulseInfoApplying", function( ply, ragdoll )
     if not ragdoll:IsRagdoll() then return end
 
     local data = ply[ packageName ]
@@ -30,7 +30,7 @@ hook.Add( "PlayerRagdollCreated", packageName, function( ply, ragdoll )
     phys:ApplyForceOffset( impulse, data.Origin )
 end )
 
-hook.Add( "DoPlayerDeath", packageName, function( ply, _, damageInfo )
+hook.Add( "DoPlayerDeath", "ImpulseInfoSaving", function( ply, _, damageInfo )
     local start, endpos = damageInfo:GetDamagePosition(), ply:LocalToWorld( ply:OBBCenter() )
     endpos[3] = start[3]
 
