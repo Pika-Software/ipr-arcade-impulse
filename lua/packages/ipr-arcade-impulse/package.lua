@@ -1,4 +1,6 @@
 name = "ipr-arcade-impulse"
 version = 000101
 autorun = true
-client = false
+init = {
+    ["client"] = "init.lua"
+}
